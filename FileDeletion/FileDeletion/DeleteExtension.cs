@@ -21,7 +21,7 @@ namespace FileDeletion
         {
             List<FileInfo> list = new List<FileInfo>();
             foreach (string ext in Extensions)
-                list.AddRange(new DirectoryInfo(Path).GetFiles("*" + ext).Where(p =>
+                list.AddRange(new DirectoryInfo(Path).GetFiles("*" + ext, SearchOption.AllDirectories).Where(p =>
                       p.Extension.Equals(ext, StringComparison.CurrentCultureIgnoreCase))
                       .ToArray());
 
