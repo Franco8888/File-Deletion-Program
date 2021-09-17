@@ -28,6 +28,8 @@ namespace FileDeletion
             DeleteExtension delExt = new(inputPath, extensions);
 
             delExt.DeleteFiles();
+
+            Console.WriteLine("Files Successfully deleted");
         }
     }
 }
